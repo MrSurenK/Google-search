@@ -62,6 +62,39 @@ nav a {
 .imagesearch {
     width: 25px;
     height: 25px;
+    display: flex;
+    position: relative; left: 480px; top: -92px;
+}
+
+.voicesearch {
+    display: flex;
+    position: relative; left: 440px; top:-66px;
+}
+
+.s-box .s-input {
+    width: 528px;
+    height: 46px;
+    display: flex;
+    margin-bottom: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 200px;
+    padding:0 20px 0 50px;
+}
+
+.search-icon {
+    display:flex;
+    position: relative; left: 20px; top: -42px;
 }
 
 
+.s-btn {
+    display:inline-block;
+    position: relative; left: 140px; top: -50px;
+    margin: 5px;
+    padding: 0 16px;
+    height: 36px;
+    min-width: 54px;
+  
+    
+}
