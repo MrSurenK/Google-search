@@ -52,6 +52,16 @@ nav a {
     margin-top: 5px;
 }
 
-section {
-    display: block;
+.section-1 {
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 148px;
 }
+
+.imagesearch {
+    width: 25px;
+    height: 25px;
+}
+
+
