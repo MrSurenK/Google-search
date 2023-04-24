@@ -9,45 +9,46 @@
     <link rel="stylesheet" href="/CSS/style.css" />
   </head>
   <body>
-    <nav>
-      <div class="leftnav">
-        <a href="#">About</a>
-        <a href="#">Store</a>
-      </div>
-      <div class="rightnav">
-        <a href="#">Gmail</a>
-        <a href="#">Images</a>
-        <a href="#">
-          <img
-            src="images/svg-export/svgexport-1.png"
-            alt="menu"
-            class="menuicon"
-          />
-        </a>
-        <a href="#">
-          <img
-            src="images/AOLn63GpvhNXGwGz7yPihtRx2Ndu7sxysP6Stkf2MCFJ=s32-c-mo.jpeg"
-            alt="display picture"
-            class="displaypicture"
-          />
-        </a>
-      </div>
-    </nav>
-    <section class="section-1">
+    <header>
+      <nav>
+        <ul class="menu">
+          <a href="#">About</a>
+          <a href="#">Store</a>
+        </ul>
+        <ul class="menu">
+          <a href="#">Gmail</a>
+          <a href="#">Images</a>
+          <a href="#">
+            <img
+              src="images/svg-export/svgexport-1.png"
+              alt="menu"
+              class="menuicon"
+            />
+          </a>
+          <a href="#">
+            <img
+              src="images/AOLn63GpvhNXGwGz7yPihtRx2Ndu7sxysP6Stkf2MCFJ=s32-c-mo.jpeg"
+              alt="display picture"
+              class="displaypicture"
+            />
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <section>
       <img
         src="images/googlelogo_color_272x92dp.png"
         class="logo"
         alt="Google.com"
       />
-      <form>
-        <br /><br />
-        <div class="s-box">
-          <input type="text" class="s-input" />
-          <img
-            src="images/svg-export/svgexport-2.png"
-            alt="search"
-            class="search-icon"
-          />
+      <div class="s-box">
+        <img
+          src="images/svg-export/svgexport-2.png"
+          alt="search"
+          class="magnify-icon"
+        />
+        <input type="text" />
+        <div class="s-icons">
           <a href="#">
             <img
               src="images/svg-export/svgexport-4.png"
@@ -62,10 +63,12 @@
               class="imagesearch"
             />
           </a>
-          <input type="submit" class="s-btn" value="Google Search" />
-          <input type="submit" class="s-btn" value="I'm Feeling Lucky" />
         </div>
-      </form>
+      </div>
+      <div class="button-container">
+        <input type="submit" class="s-btn" value="Google Search" />
+        <input type="submit" class="s-btn" value="I'm Feeling Lucky" />
+      </div>
       <div class="lang">
         Google offered in:
         <a href="#">中文(简体)</a>
@@ -75,16 +78,18 @@
     </section>
     <footer>
       <h4>Singapore</h4>
-      <div class="left_bottom">
-        <a href="#">Advertising</a>
-        <a href="#">Business</a>
-        <a href="#">How Search works</a>
-      </div>
-      <div class="right_bottom">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Settings</a>
-      </div>
+      <nav>
+        <ul id="footer-left">
+          <a href="#">Advertising</a>
+          <a href="#">Business</a>
+          <a href="#">How Search works</a>
+        </ul>
+        <ul id="footer-right">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Settings</a>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>

@@ -4,97 +4,188 @@
     color: #202124;
     text-decoration:none;
     box-sizing:border-box;
+    margin-left: 0px;
 }
 
 body {
+    font-family: arial, sans-serif;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 0.9em;
+    margin-top: 0px;
+    margin-right: 0px;
 }
 
 
-.rightnav {
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    color:#202124;
+}
+
+.menu {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin-top:-38px;
-
-}
-
-.leftnav {
-    display:flex;
-    align-items: center;
-    justify-content:flex-start;
-}
-
-nav a {
-    display:inline-block;
-    line-height:24px;
-    font-weight:400;
-    color:rgba(0,0,0,0.8);
-    cursor: pointer;
-    padding: 5px 6.7px;
-}
-
-.rightnav a {
-    margin-top:-5px;
-}
-
-.menuicon {
-    margin-top:5px;
-
+    padding-left: 20px;
+    margin-right: 10px;
 }
 
 .displaypicture {
-    height:32px;
-    width: 32px;
-    border-radius:16px;
-    margin-top: 5px;
+    border-radius: 20px;
+    padding: 1px;
 }
 
-.section-1 {
+.displaypicture:hover {
+    box-shadow: 0 0 10px 0 rgb(95 99 104);
+    cursor: pointer;
+}
+
+ul > a, ul > img {
+    padding: 0 8px;
+}
+
+.menuicon {
+    padding:5px;
+}
+
+.menuicon:hover {
+    box-shadow: 0 0 10px 0 rgb(95 99 104);
+    border-radius: 20px;
+    cursor:pointer;
+    fill: currentColor;
+}
+
+section {
     display: flex;
     align-items: center;
-    flex-direction:column;
-    margin-top: 148px;
+    flex-direction: column;
+    margin-top: 5vh;
 }
 
 .imagesearch {
     width: 25px;
     height: 25px;
+}
+
+.s-box {
     display: flex;
-    position: relative; left: 480px; top: -92px;
+    justify-content: space-between;
+    width: 544px;
+    min-height: 44px;
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+    padding: 8px 5px 5px 8px;
 }
 
-.voicesearch {
-    display: flex;
-    position: relative; left: 440px; top:-66px;
+.s-box:hover {
+    box-shadow: 0 0 10px 0 rgb(95 99 104);
+
 }
 
-.s-box .s-input {
-    width: 528px;
-    height: 46px;
-    display: flex;
-    margin-bottom: 8px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 200px;
-    padding:0 20px 0 50px;
+.s-box > input {
+    flex-grow: 1;
+    border: none;
+    outline:none;
+    text-align:left;
+    padding:5px;
+    font-size: 16px;
 }
 
-.search-icon {
-    display:flex;
-    position: relative; left: 20px; top: -42px;
+.magnify-icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
+.logo {
+    margin: 30px;
+}
+
+.button-container {
+    padding-top: 53px;
+}
 
 .s-btn {
-    display:inline-block;
-    position: relative; left: 140px; top: -50px;
-    margin: 5px;
-    padding: 0 16px;
+    background-color:#F8F9FA;
+    border-radius:5px;
+    border:none;
     height: 36px;
-    min-width: 54px;
-  
-    
+    padding: 0 20px;
+    margin: 0 5px;
+}
+
+.s-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 gainsboro;
+
+}
+
+
+.lang {
+    margin-top: 50px;
+    color: #4d5156;
+    font-size: small;
+}
+
+.lang a  {
+    color: #1a0dab;
+    padding: 0 3px;
+    font-size: small;
+}
+
+
+
+footer {
+    display:flex;
+    justify-content: flex-start;
+    margin-top: 140px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #F2F2F2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color:#70757a;
+}
+
+h4 {
+    margin-left: 23px;
+    color:#70757a;
+    font-weight: normal;
+}
+
+hr {
+    color:#202124;
+}
+
+#footer-left {
+    display:flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    align-items: center;
+
+}
+
+#footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+ul#footer-left >a {
+    color:#70757a;
+}
+
+ul#footer-right >a {
+    color:#70757a;
 }
