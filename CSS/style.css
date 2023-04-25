@@ -142,8 +142,6 @@ section {
     font-size: small;
 }
 
-
-
 footer {
     display:flex;
     justify-content: flex-start;
@@ -158,9 +156,12 @@ footer {
 }
 
 h4 {
-    margin-left: 23px;
+    display: block;
+    padding:1px 10px 10px 20px;
+    margin:15px 0 0 0;
     color:#70757a;
     font-weight: normal;
+    border-bottom: 1px solid #dadce0;
 }
 
 hr {
@@ -179,7 +180,7 @@ hr {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 10px;
+    padding-right: 10px; 
 }
 
 ul#footer-left >a {
