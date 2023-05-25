@@ -1,3 +1,6 @@
+/* CSS Guided by https://www.youtube.com/watch?v=5EJWYUwOe3E*/
+/* CSS Styled using flexbpx (Useful flexbox guide: https://www.youtube.com/watch?v=fYq5PXgSsbE)*/
+
 * {
     font-family: arial, sans-serif;
     font-size:14px;
@@ -7,6 +10,7 @@
     margin-left: 0px;
 }
 
+/* Main body fomat */
 body {
     font-family: arial, sans-serif;
     display:flex;
@@ -18,17 +22,19 @@ body {
 }
 
 
-
+/* Formatting for all hover objects */
 a:hover {
     text-decoration: underline;
 }
 
+/* top navigation bar formatting */
 nav {
     display: flex;
     justify-content: space-between;
     color:#202124;
 }
 
+/* Top right menu icon formatting */
 .menu {
     display: flex;
     align-items: center;
@@ -36,16 +42,19 @@ nav {
     margin-right: 10px;
 }
 
+/* Top right profile picture formatting */
 .displaypicture {
     border-radius: 20px;
     padding: 1px;
 }
 
+/* Display picture effects */
 .displaypicture:hover {
     box-shadow: 0 0 10px 0 rgb(95 99 104);
     cursor: pointer;
 }
 
+/* Top right nav bar menu icon and profile picture spacing */
 ul > a, ul > img {
     padding: 0 8px;
 }
@@ -54,13 +63,14 @@ ul > a, ul > img {
     padding:5px;
 }
 
+/* menu icon effects */
 .menuicon:hover {
     box-shadow: 0 0 10px 0 rgb(95 99 104);
     border-radius: 20px;
     cursor:pointer;
     fill: currentColor;
 }
-
+/* Google image, Search bar, search button and languages offered container */
 section {
     display: flex;
     align-items: center;
@@ -68,27 +78,43 @@ section {
     margin-top: 5vh;
 }
 
+/* Camera search icon on search bar */
 .imagesearch {
     width: 25px;
     height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
+
+/* To do: Tooltip formatting for both images on right end of search bar */
+
+
+
+/* Search box formatting */
 .s-box {
     display: flex;
+    /* Space between evens all the contents out in the s-box flexbox */
     justify-content: space-between;
-    width: 544px;
+    /*Used pixel for height and width instead of vh to prevent shrinking of search box as browser window size is adjusted */
+    width: 580px;
+    height: 20px;
     min-height: 44px;
     border: 1px solid gainsboro;
     border-radius: 20px;
-    padding: 8px 5px 5px 8px;
+    padding: 8px 5px 8px 8px;
+    flex-shrink: 0;
 }
 
+/* Search box hover effect */
 .s-box:hover {
     box-shadow: 0 0 10px 0 rgb(95 99 104);
 
 }
 
+/* Search box formatting */
 .s-box > input {
+    /* Flex grow ensures that the search input created in HTML takes the entire flex box */
     flex-grow: 1;
     border: none;
     outline:none;
@@ -97,6 +123,7 @@ section {
     font-size: 16px;
 }
 
+/*search box magnifying icon */
 .magnify-icon {
     height: 20px;
     width: 20px;
@@ -106,12 +133,15 @@ section {
     margin-right: 5px;
 }
 
+/*Google logo formatting */
 .logo {
-    margin: 30px;
+    /* Edited using viewheight to make it more consistent with different browser sizes */
+    margin: 11.5vh 0 2vh 0;
 }
 
+/* Button formatting */
 .button-container {
-    padding-top: 53px;
+    padding-top: 3vh;
 }
 
 .s-btn {
@@ -129,9 +159,9 @@ section {
 
 }
 
-
+/* Language formatting */
 .lang {
-    margin-top: 50px;
+    margin-top: 2vh;
     color: #4d5156;
     font-size: small;
 }
@@ -141,6 +171,9 @@ section {
     padding: 0 3px;
     font-size: small;
 }
+
+/* Footer formatting */
+
 
 footer {
     display:flex;
@@ -155,6 +188,7 @@ footer {
     color:#70757a;
 }
 
+/*Singapore line on the Footer */
 h4 {
     display: block;
     padding:1px 10px 10px 20px;
@@ -170,17 +204,22 @@ hr {
 
 #footer-left {
     display:flex;
+    /* Sends all the content to the left side of the page */
     justify-content: flex-start;
-    padding-left: 10px;
     align-items: center;
+    /*Fixed margin to align nicely */
+    margin-left: -30px;
+    
 
 }
 
 #footer-right {
     display: flex;
+    /* Sends all the content to the right side of the page */
     justify-content: flex-end;
     align-items: center;
-    padding-right: 10px; 
+    margin-right: 30px;
+    
 }
 
 ul#footer-left >a {
@@ -190,3 +229,63 @@ ul#footer-left >a {
 ul#footer-right >a {
     color:#70757a;
 }
+
+/* Format the Google page to be mobile friendly */
+/* Will only be applied if the width is less than 630px */
+
+
+@media (max-width: 631px) {
+    #footer-nav {
+       flex-direction: column;
+
+   }
+
+   #footer-left {
+       justify-content: center;
+   }
+
+   #footer-right {
+       justify-content: center;
+
+   }
+
+   .s-box { 
+    /*Makes the search box dynamically grow and shrink according to window size because vh was used*/
+    width: 95vw;
+   }
+   
+}
+
+
+@media (max-height: 450px) {
+/* So when the height of the browser window is shrunk there wont be a verticle scroll bar */
+    body {
+        overflow-x: hidden;
+    }
+
+/* Make the footer relative so when height is reduced the footer would be hidden */   
+/* Adjust footer margin so as to ensure smooth transition when hiding the footer */
+    footer {
+        position: relative;
+        margin-top: 30px;
+    }
+
+
+}
+
+/* ensure that when both height and width are changed the transition of the footer remains smooth when it is flexed column */
+@media (max-height: 450px) and (max-width: 630px) {
+
+    body {
+        overflow: hidden;
+    }
+/* margin top adjustment on the footer to ensure smooth transition under the media parameters */
+    footer {
+        margin-top: -5px;
+        position: relative;
+    }
+
+
+}
+
+
